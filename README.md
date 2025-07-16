@@ -18,7 +18,7 @@
 
 - HTML5
 - CSS3
-- JavaScript (Vanilla)
+- JavaScript
 - [Google Fonts & Icons]
 - Designed with AI via Google AI Studio
 
@@ -33,17 +33,4 @@
 
 ## 👩‍💻 Author
 
-- Ghazal Nateghi  
-- [Your LinkedIn or GitHub link here]
-
----
-
-## 📷 Preview
-
-> *Screenshots of your app UI (if available)*
-
----
-
-## 📄 License
-
-This project is licensed under the MIT License.
+- Ghazal nateghi
