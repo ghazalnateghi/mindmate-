@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mood Tracker - MindMate</title>
+    <link rel="stylesheet" href="/taskbar/task.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+    <div class="app-container">
+        
+        <aside class="sidebar" id="sidebar">
+            <div class="sidebar-header">
+                <div class="logo-container">
+                    <div class="profile-avatar">
+                        <img src="/images/ChatGPT Image Jul 16, 2025, 03_32_36 AM.png" alt="Profile" />
+                    </div>
+                    <span class="logo-text">MindMate</span>
+                </div>
+            </div>
+
+            <nav class="sidebar-nav">
+                <ul class="nav-menu">
+                    <li class="nav-item">
+                        <a href="/dashboard/dashboard.html" class="nav-link">
+                            <i class="fas fa-home nav-icon"></i>
+                            <span>Dashboard</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="/mood-tracker/mood-tracker.html" class="nav-link active">
+                            <i class="fas fa-smile nav-icon"></i>
+                            <span>Mood Tracker</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="/daily-quotes/daily-quotes.html" class="nav-link">
+                            <i class="fas fa-quote-left nav-icon"></i>
+                            <span>Daily Quotes</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="/taskbar/task.html" class="nav-link">
+                            <i class="fas fa-list nav-icon"></i>
+                            <span>My Tasks</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="/setting/settings.html" class="nav-link">
+                            <i class="fas fa-cog nav-icon"></i>
+                            <span>Settings</span>
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+
+            <div class="sidebar-footer">
+                <a href="/mindmate-auth/login.html" class="logout-btn">
+                    <i class="fas fa-arrow-left nav-icon"></i>
+                    <span>Logout</span>
+                </a>
+            </div>
+        </aside>
+
+        
+        <button class="mobile-menu-toggle" id="mobileMenuToggle">
+            <i class="fas fa-bars"></i>
+        </button>
+
+        
+        <main class="main-content">
+            <header class="content-header">
+                <div class="header-left">
+                    <h1 class="page-title">Mood Tracker</h1>
+                    <p class="page-subtitle">Track your daily mood and emotional well-being.</p>
+                </div>
+                <div class="greeting-banner" id="greetingBanner">
+                    <span class="greeting-text" id="greetingText">How are you feeling today?</span>
+                    <div class="current-time" id="currentTime"></div>
+                </div>
+            </header>
+
+            
+            <section class="mood-selection">
+                <h2 class="section-title">How are you feeling right now?</h2>
+                <div class="mood-options">
+                    <button class="mood-btn" data-mood="excellent">
+                        <span class="mood-emoji">😄</span>
+                        <span class="mood-label">Excellent</span>
+                    </button>
+                    <button class="mood-btn" data-mood="good">
+                        <span class="mood-emoji">😊</span>
+                        <span class="mood-label">Good</span>
+                    </button>
+                    <button class="mood-btn" data-mood="okay">
+                        <span class="mood-emoji">😐</span>
+                        <span class="mood-label">Okay</span>
+                    </button>
+                    <button class="mood-btn" data-mood="sad">
+                        <span class="mood-emoji">😢</span>
+                        <span class="mood-label">Sad</span>
+                    </button>
+                    <button class="mood-btn" data-mood="stressed">
+                        <span class="mood-emoji">😰</span>
+                        <span class="mood-label">Stressed</span>
+                    </button>
+                </div>
+            </section>
+
+            
+            <section class="mood-notes">
+                <h3 class="section-title">Add a note (optional)</h3>
+                <textarea id="moodNote" class="mood-textarea" placeholder="What's on your mind today?"></textarea>
+                <button id="saveMoodBtn" class="save-mood-btn">Save Mood Entry</button>
+            </section>
+
+    
+            <section class="mood-history">
+                <h2 class="section-title">Mood History</h2>
+                <div class="mood-entries" id="moodEntries">
+                    
+                </div>
+            </section>
+        </main>
+    </div>
+
+    <script src="mood-tracker.js"></script>
+</body>
+</html>

@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Daily Quotes - MindMate</title>
+    <link rel="stylesheet" href="/taskbar/task.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+    <div class="app-container">
+        <!-- Sidebar -->
+        <aside class="sidebar" id="sidebar">
+            <div class="sidebar-header">
+                <div class="logo-container">
+                    <div class="profile-avatar">
+                        <img src="/images/ChatGPT Image Jul 16, 2025, 03_32_36 AM.png" alt="Profile" />
+                    </div>
+                    <span class="logo-text">MindMate</span>
+                </div>
+            </div>
+
+            <nav class="sidebar-nav">
+                <ul class="nav-menu">
+                    <li class="nav-item">
+                        <a href="/dashboard/dashboard.html" class="nav-link">
+                            <i class="fas fa-home nav-icon"></i>
+                            <span>Dashboard</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="/mood-tracker/mood-tracker.html" class="nav-link">
+                            <i class="fas fa-smile nav-icon"></i>
+                            <span>Mood Tracker</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="/daily-quotes/daily-quotes.html" class="nav-link active">
+                            <i class="fas fa-quote-left nav-icon"></i>
+                            <span>Daily Quotes</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="/taskbar/task.html" class="nav-link">
+                            <i class="fas fa-list nav-icon"></i>
+                            <span>My Tasks</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="/setting/settings.html" class="nav-link">
+                            <i class="fas fa-cog nav-icon"></i>
+                            <span>Settings</span>
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+
+            <div class="sidebar-footer">
+                <a href="/mindmate-auth/login.html" class="logout-btn">
+                    <i class="fas fa-arrow-left nav-icon"></i>
+                    <span>Logout</span>
+                </a>
+            </div>
+        </aside>
+
+        <!-- Mobile Menu Toggle -->
+        <button class="mobile-menu-toggle" id="mobileMenuToggle">
+            <i class="fas fa-bars"></i>
+        </button>
+
+        <!-- Main Content -->
+        <main class="main-content">
+            <header class="content-header">
+                <div class="header-left">
+                    <h1 class="page-title">Daily Quotes</h1>
+                    <p class="page-subtitle">Find inspiration and motivation for your day.</p>
+                </div>
+                <div class="greeting-banner" id="greetingBanner">
+                    <span class="greeting-text">✨ Daily Inspiration</span>
+                    <div class="current-time" id="currentTime"></div>
+                </div>
+            </header>
+
+            <!-- Quote of the Day -->
+            <section class="quote-of-day">
+                <div class="quote-card">
+                    <div class="quote-icon">
+                        <i class="fas fa-quote-left"></i>
+                    </div>
+                    <blockquote class="quote-text" id="dailyQuote">
+                        "The only way to do great work is to love what you do."
+                    </blockquote>
+                    <cite class="quote-author" id="quoteAuthor">- Steve Jobs</cite>
+                    <button class="new-quote-btn" id="newQuoteBtn">
+                        <i class="fas fa-refresh"></i>
+                        Get New Quote
+                    </button>
+                </div>
+            </section>
+
+            <!-- Quote Categories -->
+            <section class="quote-categories">
+                <h2 class="section-title">Browse by Category</h2>
+                <div class="category-grid">
+                    <button class="category-card" data-category="motivation">
+                        <i class="fas fa-rocket"></i>
+                        <span>Motivation</span>
+                    </button>
+                    <button class="category-card" data-category="success">
+                        <i class="fas fa-trophy"></i>
+                        <span>Success</span>
+                    </button>
+                    <button class="category-card" data-category="wisdom">
+                        <i class="fas fa-lightbulb"></i>
+                        <span>Wisdom</span>
+                    </button>
+                    <button class="category-card" data-category="happiness">
+                        <i class="fas fa-heart"></i>
+                        <span>Happiness</span>
+                    </button>
+                </div>
+            </section>
+
+            <!-- Favorite Quotes -->
+            <section class="favorite-quotes">
+                <h2 class="section-title">Your Favorite Quotes</h2>
+                <div class="favorites-list" id="favoritesList">
+                    <div class="empty-state">
+                        <i class="fas fa-star"></i>
+                        <p>No favorite quotes yet. Click the heart icon on quotes to save them!</p>
+                    </div>
+                </div>
+            </section>
+        </main>
+    </div>
+
+    <script src="daily-quotes.js"></script>
+</body>
+</html>

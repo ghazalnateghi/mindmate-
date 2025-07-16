@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="login.css">
+    <title>login</title>
+</head>
+<body>
+   <body>
+    <div class="container">
+        
+        <div class="logo">
+            <span class="logo-icon">◆</span>
+            <span class="logo-text">MindMate</span>
+        </div>
+
+        
+        <div class="auth-card">
+            <h1 class="welcome-title">Welcome to MindMate</h1>
+            
+            
+            <div class="tabs">
+                <button class="tab-button active" id="loginTab" onclick="switchTab('login')">Log In</button>
+                <button class="tab-button" id="signupTab" onclick="switchTab('signup')">Sign Up</button>
+            </div>
+
+            
+            <div class="form-container" id="loginForm">
+                <form class="auth-form">
+                    <div class="form-group">
+                        <label for="loginEmail">Username or Email</label>
+                        <input type="text" id="loginEmail" placeholder="Enter your username or email" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="loginPassword">Password</label>
+                        <input type="password" id="loginPassword" placeholder="Enter your password" required>
+                    </div>
+                    
+                    <div class="form-options">
+                        <div class="remember-me">
+                            <input type="checkbox" id="rememberMe">
+                            <label for="rememberMe">Remember Me</label>
+                        </div>
+                        <a href="#" class="forgot-password">Forgot Password?</a>
+                    </div>
+                    
+                 <a href="/taskbar/task.html" class="a-btn"><button type="submit" class="auth-button">Log In</button></a>
+                    
+                    <p class="switch-form">
+                        Don't have an account? <a href="#" onclick="switchTab('signup')">Sign Up</a>
+                    </p>
+                </form>
+            </div>
+
+            
+            <div class="form-container hidden" id="signupForm">
+                <form class="auth-form">
+                    <div class="form-group">
+                        <label for="signupName">Full Name</label>
+                        <input type="text" id="signupName" placeholder="Enter your full name" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="signupEmail">Email</label>
+                        <input type="email" id="signupEmail" placeholder="Enter your email" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="signupPassword">Password</label>
+                        <input type="password" id="signupPassword" placeholder="Create a password" required>
+                    </div>
+                    
+                   <a href="/taskbar/task.html" class="a-btn"><button type="submit" class="auth-button">Sign Up</button></a>
+                    
+                    <p class="switch-form">
+                        Already have an account? <a href="#" onclick="switchTab('login')">Log In</a>
+                    </p>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <script src="login.js"></script>
+</body>
+</html>

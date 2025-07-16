@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MindMate - Organize your day, clear your mind</title>
+    <link rel="stylesheet" href="task.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+    <div class="app-container">
+        
+        <aside class="sidebar" id="sidebar">
+            <div class="sidebar-header">
+                <div class="logo-container">
+                    <div class="profile-avatar">
+                        <img src="/images/ChatGPT Image Jul 16, 2025, 03_32_36 AM.png" alt="Profile" />
+                    </div>
+                    <span class="logo-text">MindMate</span>
+                </div>
+            </div>
+
+            <nav class="sidebar-nav">
+                <ul class="nav-menu">
+                    <li class="nav-item">
+                        <a href="/dashboard/dashboard.html" class="nav-link">
+                            <i class="fas fa-home nav-icon"></i>
+                            <span>Dashboard</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="/mood-tracker/mood-tracker.html" class="nav-link">
+                            <i class="fas fa-smile nav-icon"></i>
+                            <span>Mood Tracker</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="/daily-quotes/daily-quotes.html" class="nav-link">
+                            <i class="fas fa-quote-left nav-icon"></i>
+                            <span>Daily Quotes</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="/taskbar/task.html" class="nav-link active">
+                            <i class="fas fa-list nav-icon"></i>
+                            <span>My Tasks</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="/setting/settings.html" class="nav-link">
+                            <i class="fas fa-cog nav-icon"></i>
+                            <span>Settings</span>
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+
+            <div class="sidebar-footer">
+                <a href="/mindmate-auth/login.html" class="logout-btn">
+                    <i class="fas fa-arrow-left nav-icon"></i>
+                    <span>Logout</span>
+                </a>
+            </div>
+        </aside>
+
+        <!-- Mobile Menu Toggle -->
+        <button class="mobile-menu-toggle" id="mobileMenuToggle">
+            <i class="fas fa-bars"></i>
+        </button>
+
+        <!-- Main Content -->
+        <main class="main-content">
+            <!-- Header -->
+            <header class="content-header">
+                <div class="header-left">
+                    <h1 class="page-title">My Tasks</h1>
+                    <p class="page-subtitle">Organize your day, clear your mind.</p>
+                </div>
+                <div class="greeting-banner" id="greetingBanner">
+                    <span class="greeting-text" id="greetingText">Hi Clara 😊 Ready for a productive day?</span>
+                    <div class="current-time" id="currentTime">03:21 AM +04</div>
+                </div>
+            </header>
+
+            <!-- Task Input Section -->
+            <section class="task-input-section">
+                <div class="input-container">
+                    <input 
+                        type="text" 
+                        id="taskInput" 
+                        class="task-input" 
+                        placeholder="Add a new task"
+                        maxlength="100"
+                    />
+                    <button id="addTaskBtn" class="add-task-btn">Add</button>
+                </div>
+
+                <div class="category-buttons">
+                    <button class="category-btn active" data-category="Personal">Personal</button>
+                    <button class="category-btn" data-category="Work">Work</button>
+                    <button class="category-btn" data-category="Study">Study</button>
+                    <button class="category-btn" data-category="Wellness">Wellness</button>
+                </div>
+            </section>
+
+            <!-- Tasks Sections -->
+            <section class="tasks-section">
+                <!-- Today Tasks -->
+                <div class="task-group">
+                    <h2 class="section-title">Today</h2>
+                    <div class="task-list" id="todayTasks">
+                        <!-- Tasks will be dynamically added here -->
+                    </div>
+                </div>
+
+                <!-- Upcoming Tasks -->
+                <div class="task-group">
+                    <h2 class="section-title">Upcoming</h2>
+                    <div class="task-list" id="upcomingTasks">
+                        <!-- Tasks will be dynamically added here -->
+                    </div>
+                </div>
+            </section>
+        </main>
+    </div>
+
+    <!-- Task Item Template -->
+    <template id="taskTemplate">
+        <div class="task-item" data-task-id="">
+            <div class="task-checkbox-container">
+                <input type="checkbox" class="task-checkbox" />
+                <span class="custom-checkbox"></span>
+            </div>
+            <div class="task-content">
+                <div class="task-title"></div>
+                <div class="task-due-date"></div>
+            </div>
+            <div class="task-indicator"></div>
+            <div class="task-actions">
+                <button class="task-action-btn edit-btn" title="Edit task">
+                    <i class="fas fa-edit"></i>
+                </button>
+                <button class="task-action-btn delete-btn" title="Delete task">
+                    <i class="fas fa-trash"></i>
+                </button>
+            </div>
+        </div>
+    </template>
+
+    <script src="task.js"></script>
+</body>
+</html>
